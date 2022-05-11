@@ -1,0 +1,32 @@
+﻿@model myWebsite.Models.classes.Web
+@{
+    ViewBag.Title = "bringWeb";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Home Page</h2>
+<hr />
+
+@using (Html.BeginForm("UpdateWebsite", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.name)
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.profile)
+    @Html.TextBoxFor(x => x.profile, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.explanation)
+    @Html.TextBoxFor(x => x.explanation, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.contact)
+    @Html.TextBoxFor(x => x.contact, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update Home Page</button>
+}
+
